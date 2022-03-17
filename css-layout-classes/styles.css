@@ -1,0 +1,33 @@
+/* element selectors */
+* {
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+/* class selectors */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-two-thirds {
+  flex-basis: calc(100% - (100%/3));
+}
+
+.column-one-fourth {
+  flex-basis: 25%;
+}
+
+/* id selectors */
