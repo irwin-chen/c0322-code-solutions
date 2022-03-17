@@ -18,15 +18,15 @@ img {
   justify-content: space-between;
 }
 
-.one-third {
+.column-one-third {
   flex-basis: calc(100% / 3);
 }
 
-.two-thirds {
+.column-two-thirds {
   flex-basis: calc(100% - (100%/3));
 }
 
-.one-fourth {
+.column-one-fourth {
   flex-basis: 25%;
 }
 
