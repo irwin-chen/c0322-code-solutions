@@ -1,0 +1,48 @@
+body {
+  background-color: #1a96da;
+}
+
+img {
+  max-width: 65px;
+  max-height: 65px;
+}
+
+.container {
+  width: 60%;
+  margin: 50px auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-thirty {
+  flex-basis: 30%;
+}
+
+.circle-box {
+  align-items: center;
+  background-color: white;
+  border-radius: 100%;
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+}
+
+.text {
+  font-family: Lato, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.center {
+  justify-content: center;
+}
+
+.margin {
+  margin: 10px;
+}
