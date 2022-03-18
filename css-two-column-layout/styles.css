@@ -1,0 +1,20 @@
+.container {
+  width: 60%;
+  margin: 10vh auto;
+}
+
+.row {
+  display: flex;
+}
+
+.text {
+  font-family: Karla, sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  color: #454545;
+}
