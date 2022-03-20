@@ -45,7 +45,7 @@ button {
   height: 100%;
 }
 
-.justify-content {
+.center-content {
   justify-content: space-around;
   align-items: center;
 }
@@ -65,9 +65,9 @@ button {
   color: #a6a6a6;
 }
 
-.padding-tb {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+.header-margin {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .border {
@@ -77,4 +77,15 @@ button {
 
 .logo-size {
   max-width: 200px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.section-margin {
+  margin: 6rem auto;
 }
