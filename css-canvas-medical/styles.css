@@ -175,8 +175,9 @@ button {
   margin-right: 40px;
 }
 
-.privacy-margin {
-  margin: 40px auto;
+.privacy-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .address-margin {
