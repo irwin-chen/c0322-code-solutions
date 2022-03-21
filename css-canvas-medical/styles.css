@@ -1,0 +1,189 @@
+/* element selectors */
+
+button {
+  background-color: #294363;
+  color: white;
+  border-radius: 6px;
+  border-width: 0;
+}
+
+/* class selectors */
+
+.container {
+  width: 90%;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-eighty {
+  width: 80%;
+}
+
+.column-twenty {
+  width: 20%;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.height {
+  height: 100%;
+}
+
+.flex-center {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-contact {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.text-font {
+  font-family: Avenir, sans-serif;
+}
+
+.header-text-size {
+  font-size: 1.3rem;
+}
+
+.header-text {
+  color: #a6a6a6;
+}
+
+.small-margin {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.border {
+  border-color: #e7e9ec;
+  border-style: solid;
+}
+
+.logo-size {
+  max-width: 200px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  filter: contrast(0.7);
+}
+
+.relative-position {
+  position: relative;
+}
+
+.absolute-position {
+  position: absolute;
+  top: 6rem;
+  left: 100px;
+}
+
+.text-container-half {
+  width: 50%;
+}
+
+.text-white {
+  color: white;
+}
+
+.section-text {
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+}
+
+.section-title {
+  font-family: "Tiempos Headline", serif;
+  font-stretch: condensed;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+}
+
+.start-button {
+  padding: 20px 75px;
+  font-size: 1.75rem;
+}
+
+.background-gray {
+  background-color: #fafafa;
+}
+
+.text-gray {
+  color: #6e6e6e;
+}
+
+.section-title-size {
+  font-size: 3rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.location-text {
+  font-size: 1.5rem;
+}
+
+.bottom-margin {
+  margin-bottom: 20px;
+}
+
+.hero-text-margin {
+  margin-bottom: 40px;
+}
+
+.learn-button-position {
+  align-content: center;
+  text-align: end;
+}
+
+.dark-gray-background {
+  background-color: #525351;
+}
+
+.padding-bottom {
+  padding-bottom: 20px;
+}
+
+.margin-right {
+  margin-right: 40px;
+}
+
+.privacy-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.address-margin {
+  margin: 5px auto;
+}
+
+.no-top-margin {
+  margin-top: 0;
+}
