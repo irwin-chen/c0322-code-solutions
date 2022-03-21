@@ -81,7 +81,7 @@ button {
 .hero-image {
   display: block;
   width: 100%;
-  opacity: 0.9;
+  filter: contrast(0.7);
 }
 
 .relative-position {
