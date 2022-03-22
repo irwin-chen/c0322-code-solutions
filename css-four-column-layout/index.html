@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&family=Heebo:wght@500&family=IBM+Plex+Sans:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS Four Column Layout</title>
+  </head>
+  <body>
+    <div class="container margin-center">
+      <h2 class="text-align-center ">How It Works</h2>
+      <div class="row">
+        <div class="column-fourth column-padding"> <!-- app switching -->
+          <img class="phone-image" src="images/screen-1.png" alt="screen-1">
+          <div class="row flex-center text-align-center flex-column">
+            <img class="icon margin-center" src="images/switch-icon.png" alt="switch-icon">
+            <p class="text-bold small-text">App Switching</p>
+            <p class="smaller-text">Toggles all your apps on and off.</p>
+          </div>
+        </div>
+        <div class="column-fourth column-padding"> <!-- trip filtering -->
+          <img class="phone-image" src="images/screen-2.png" alt="screen-2">
+          <div class="row flex-center text-align-center flex-column">
+            <img class="icon margin-center" src="images/filter-icon.png" alt="Filters">
+            <p class="text-bold small-text">Trip Filtering</p>
+            <p class="smaller-text">Evaluates your trip requests</p>
+          </div>
+        </div>
+        <div class="column-fourth column-padding"> <!-- Service Filters  -->
+          <img class="phone-image" src="images/screen-3.png" alt="screen-3">
+          <div class="row flex-center text-align-center flex-column">
+            <img class="icon margin-center" src="images/slider-icon.png" alt="Service">
+            <p class="text-bold small-text">Service Filters</p>
+            <p class="smaller-text">Accepts only your ideal trips.</p>
+          </div>
+        </div>
+        <div class="column-fourth column-padding"> <!-- stats + mileage -->
+          <img class="phone-image" src="images/screen-4.png" alt="screen-4">
+          <div class="row flex-center text-align-center flex-column">
+            <img class="icon margin-center" src="images/bars-icon.png" alt="bars">
+            <p class="text-bold small-text">Stats + Mileage</p>
+            <p class="smaller-text">Tracks your trips across all apps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
