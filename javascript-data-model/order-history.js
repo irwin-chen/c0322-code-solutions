@@ -8,7 +8,7 @@ var orderHistory = [
     item: [ /* number of items in order */
       { /* item in order */
         productName: 'JavaScript for impatient programmers',
-        productImage: "src='images/product.png'",
+        productImage: 'images/product-1.png',
         author: 'Rauschmayer, Dr. Axel',
         returnWindow: 'Sep 7, 2020',
         itemPrice: 31.55
@@ -24,7 +24,7 @@ var orderHistory = [
     item: [
       {
         productName: 'The Timeless Way of Building',
-        productImage: "src='images/product.png'",
+        productImage: 'images/product-2.png',
         author: 'Alexander, Christopher',
         returnWindow: 'Aug 19, 2020',
         itemPrice: 41.33
@@ -40,7 +40,7 @@ var orderHistory = [
     item: [
       {
         productName: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
-        productImage: "src='images/product.png'",
+        productImage: 'images/product-3.png',
         author: null,
         returnWindow: 'Aug 5, 2020',
         itemPrice: 15.98
@@ -56,14 +56,14 @@ var orderHistory = [
     item: [
       { /* item 1 */
         productName: 'GameCube Controller - Super Smash Bros. Edition (Nintendo Switch)',
-        productImage: "src='images/product.png'",
+        productImage: 'images/product-4.png',
         author: null,
         returnWindow: 'Aug 4, 2020',
         itemPrice: 94.95
       },
       { /* item 2 */
         productName: 'The Art of Sql',
-        productImage: "src='images/product.png'",
+        productImage: 'images/product-5.png',
         author: 'Faroult, Stephane',
         returnWindow: 'Aug 4, 2020',
         itemPrice: 33.99
