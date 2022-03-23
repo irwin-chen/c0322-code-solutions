@@ -1,0 +1,73 @@
+/* element selectors */
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* class selectors */
+
+/* utility classes */
+
+.container {
+  width: 80%;
+}
+
+.row {
+  display: flex;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.column-fifth {
+  width: 20%;
+}
+
+.image-fit {
+  object-fit: fill;
+  width: 100%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.text-color-gray {
+  color: #d4d4d4;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.condense-text {
+  font-stretch: condensed;
+}
+
+/* semantic classes */
+
+.price-tag {
+  background-color: #fff2e7;
+  border-radius: 5px;
+  padding: 0 2px;
+}
+
+.small-padding-lr {
+  margin: 0 8px;
+}
+
+.fit-picture {
+  object-fit: cover;
+  width: 211.84px;
+  height: 317.75px;
+}
+
+.small-text {
+  font-size: 14px;
+  font-weight: bolder;
+}
