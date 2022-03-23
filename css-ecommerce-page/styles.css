@@ -20,6 +20,10 @@
   margin: 0 auto;
 }
 
+.column-full {
+  width: 100%;
+}
+
 .column-fifth {
   width: 20%;
 }
@@ -63,7 +67,7 @@
 
 .fit-picture {
   object-fit: cover;
-  width: 211.84px;
+  width: 100%;
   height: 317.75px;
 }
 
