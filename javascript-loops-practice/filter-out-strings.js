@@ -4,7 +4,7 @@ function filterOutStrings(values) {
   var stringless = [];
   var count = 0;
   while (count < values.length) {
-    if (Number.isInteger(values[count])) {
+    if (typeof values[count] !== 'string') {
       stringless.push(values[count]);
     }
     count++;

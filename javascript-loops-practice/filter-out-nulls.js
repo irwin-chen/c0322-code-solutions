@@ -2,13 +2,9 @@
 
 function filterOutNulls(values) {
   var filtered = [];
-  var count = 0;
-  while (count < values.length) {
-    if (values[count] === null) {
-      count++;
-    } else {
-      filtered.push(values[count]);
-      count++;
+  for (var i = 0; i < values.length; i++) {
+    if (values[i] !== null) {
+      filtered.push(values[i]);
     }
   }
   return filtered;
