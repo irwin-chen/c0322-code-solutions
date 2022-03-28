@@ -16,7 +16,7 @@ function chunk(array, size) {
   }
   if (remainder !== 0) {
     var remainderHolder = [];
-    for (var x = 0; x < remainder; x++) {
+    for (i = 0; i < remainder; i++) {
       remainderHolder.push(array[counter]);
       counter++;
     }
