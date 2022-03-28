@@ -1,6 +1,6 @@
 console.log('hello, world');
 
-console.log('heading:', document.querySelector('h1'));
+console.log('$heading:', document.querySelector('h1'));
 console.dir(document.querySelector('h1'));
 
 console.log('$id:', document.querySelector('#explanation'));
