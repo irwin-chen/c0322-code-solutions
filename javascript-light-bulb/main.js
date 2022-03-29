@@ -1,15 +1,15 @@
 var $circle = document.querySelector('.circle');
 var $background = document.querySelector('body');
-var counter = null;
+var lightOff = true;
 
 $circle.addEventListener('click', function (event) {
-  counter++;
   var lightSwitch = '';
-  if (counter % 2 === 1) {
+  if (lightOff) {
     lightSwitch = 'light-on';
-  }
-  if (counter % 2 === 0) {
+    lightOff = false;
+  } else if (!lightOff) {
     lightSwitch = 'light-off';
+    lightOff = true;
   }
   $circle.className = 'circle circle-' + lightSwitch;
   $background.className = 'background background-' + lightSwitch;
