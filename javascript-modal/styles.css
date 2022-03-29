@@ -1,0 +1,57 @@
+/* type selectors */
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  border-radius: 5px;
+  box-shadow: 0 3px 4px gray;
+  color: white;
+  font-size: 24px;
+  border: 0;
+  margin: 0;
+  padding: 8px 30px;
+}
+
+/* class selectors */
+
+.pop-up {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  opacity: 0.9;
+}
+
+.pop-up-window {
+  width: 33%;
+  background-color: #fefefe;
+  text-align: center;
+  min-height: 220px;
+  position: sticky;
+  border-radius: 5px;
+}
+
+.modal-button {
+  background-color: #4a4ae8;
+  position: fixed;
+  top: 8px;
+  left: 8px;
+}
+
+.no-button {
+  background-color: #eb5d5d;
+}
+
+.hidden {
+  display: none;
+}
+
+.small-padding {
+  padding: 30px 0;
+}
