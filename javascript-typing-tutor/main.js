@@ -1,9 +1,11 @@
 var $text = document.querySelectorAll('span');
 var counter = 0;
 var check = null;
+var wrong = 0;
+var keystroke = 0;
 
 document.addEventListener('keydown', function (event) {
-  $text[counter].className = 'current-letter';
+  keystroke++;
   if (event.key === $text[counter].textContent) {
     check = true;
   } else {
@@ -11,14 +13,29 @@ document.addEventListener('keydown', function (event) {
   }
   rightOrWrong();
 
+  if (counter === $text.length) {
+    checkAccuracy();
+    document.querySelector('button').classList.remove = 'hidden';
+  }
 });
 
 function rightOrWrong() {
   if (check) {
     $text[counter].className = 'correct';
     counter++;
-    $text[counter].className = 'current-letter';
+    if (counter < $text.length) {
+      $text[counter].className = 'current-letter';
+    }
+
   } else if (!check) {
     $text[counter].className = 'incorrect current-letter';
+    wrong++;
   }
+}
+
+function checkAccuracy() {
+  var $accuracy = document.querySelector('.accuracy-text');
+  var accuracy = Math.round((1 - (wrong / keystroke)) * 100);
+  $accuracy.textContent = 'Accuracy: ' + accuracy + '%';
+  $accuracy.getClass = 'accuracy-text';
 }
