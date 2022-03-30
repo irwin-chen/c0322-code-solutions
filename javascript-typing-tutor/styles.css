@@ -1,0 +1,45 @@
+/* type selector */
+* {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: -6px;
+}
+
+body {
+  margin: 0;
+}
+
+span {
+  white-space: break-spaces;
+}
+
+/* class selector */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.current-letter {
+  text-decoration: underline;
+}
+
+.correct {
+  color: lime;
+}
+
+.incorrect {
+  color: red;
+}
