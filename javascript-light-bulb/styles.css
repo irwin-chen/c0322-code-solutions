@@ -1,0 +1,50 @@
+/* type selectors */
+* {
+  /* background-color: #111; */
+}
+
+/* class selectors */
+.row {
+  display: flex;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.height {
+  height: 100vh;
+}
+
+.circle-light-off {
+  box-shadow: 0 -8px 0 9px #0c0c0c;
+  background-color: #252525;
+}
+
+.circle-light-on {
+  transition: ease-in;
+  transition-duration: 0.1s;
+  background-color: #f9ea84;
+  box-shadow: 0 0 5px 10px lightgoldenrodyellow;
+}
+
+.background-light-off {
+  background-color: #111;
+}
+
+.background-light-on {
+  transition: ease-in;
+  transition-duration: 0.1s;
+  background-color: #fef9f1;
+}
+
+.background {
+  margin: 0;
+}
