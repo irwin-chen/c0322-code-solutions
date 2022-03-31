@@ -2,7 +2,7 @@ var $text = document.querySelectorAll('span');
 var $button = document.querySelector('button');
 var $span = document.querySelectorAll('span');
 var $accuracy = document.querySelector('.accuracy-text');
-var wordBank = ['tudor', 'trial', 'error', 'css', 'JavaScript', 'kappa', 'smadge', 'template', 'correct', 'hidden', 'text', 'align', 'justify', 'height'];
+// var wordBank = ['tudor', 'trial', 'error', 'css', 'JavaScript', 'kappa', 'smadge', 'template', 'correct', 'hidden', 'text', 'align', 'justify', 'height'];
 
 var counter = 0;
 var check = null;
@@ -36,7 +36,7 @@ $button.addEventListener('click', function () {
   $button.classList.add('hidden');
   $accuracy.classList.add('hidden');
   // word randomiser
-  scramble();
+  // scramble();
 });
 
 function rightOrWrong() {
@@ -59,18 +59,18 @@ function checkAccuracy() {
   $accuracy.classList.remove('hidden');
 }
 
-function scramble() {
-  var string = wordBank[Math.trunc(Math.random() * wordBank.length)];
-  for (var i = 1; i < 5; i++) {
-    string += ' ' + wordBank[Math.trunc(Math.random() * wordBank.length)];
-  }
-  for (var x = 0; x < $text.length; x++) {
-    $text[x].remove();
-  }
+// function scramble() {
+//   var string = wordBank[Math.trunc(Math.random() * wordBank.length)];
+//   for (var i = 1; i < 5; i++) {
+//     string += ' ' + wordBank[Math.trunc(Math.random() * wordBank.length)];
+//   }
+//   for (var x = 0; x < $text.length; x++) {
+//     $text[x].remove();
+//   }
 
-  for (var y = 0; y < string.length; y++) {
-    var $temp = document.createElement('span');
-    $temp.textContent = string[y];
-    document.querySelector('p').appendChild($temp);
-  }
-}
+//   for (var y = 0; y < string.length; y++) {
+//     var $temp = document.createElement('span');
+//     $temp.textContent = string[y];
+//     document.querySelector('p').appendChild($temp);
+//   }
+// }
