@@ -1,0 +1,70 @@
+/* type selector */
+* {
+  font-family: "Courier Prime", monospace;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+body {
+  margin: 0;
+}
+
+span {
+  white-space: pre;
+}
+
+/* class selector */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.current-letter {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.correct {
+  color: #19cd1b;
+}
+
+.incorrect {
+  color: #f80605;
+}
+
+.accuracy-text {
+  font-size: 20px;
+  font-weight: normal;
+  position: fixed;
+  top: 8px;
+  left: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.reset {
+  position: fixed;
+  right: 8px;
+  top: 8px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  font-weight: normal;
+  font-size: 30px;
+}
