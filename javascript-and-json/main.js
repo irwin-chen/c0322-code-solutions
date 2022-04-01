@@ -23,7 +23,7 @@ var jsonString = JSON.stringify(books);
 console.log('jsonString:', jsonString);
 console.log('typeof jsonString:', typeof jsonString);
 
-var toConvert = '{"number id":"168000","name":"jimothy"}';
+var toConvert = '{"id":"168000","name":"jimothy"}';
 console.log('toConvert:', toConvert);
 console.log('typeof toConvert:', toConvert);
 
