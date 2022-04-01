@@ -8,7 +8,7 @@ function pick(source, keys) {
     for (var x = 0; x < keys.length; x++) {
       if (objArray[i] === keys[x]) {
         if (source[keys[x]] !== undefined) {
-          results[keys[x]] = source[keys[x]];
+          results[objArray[i]] = Object.values(source)[i];
         }
       }
     }
