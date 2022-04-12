@@ -2,11 +2,9 @@
 
 function invert(source) {
   var result = {};
-  var propertyArray = Object.keys(source);
-  var valuesArray = Object.values(source);
-
-  for (var index = 0; index < propertyArray.length; index++) {
-    result[valuesArray[index]] = propertyArray[index];
+  for (var property in source) {
+    var value = source[property];
+    result[value] = property;
   }
   return result;
 }
@@ -14,8 +12,7 @@ function invert(source) {
 // invert(source)
 // takes in a source object as an argument, switches the positions of the key property and values, so that the values become the properties and vice versa
 // - create new object to hold the results
-// - create a new array that holds all the key properties of the argument object
-// - create a new array that holds all the values of the argument object
-//   - for each index of either array (they should have the same length)
-//     - assign the value of the property array at that index to the 'property' at the corresponding valuesArray index within the results object
+// - for each property in source object
+//   - create a new variable to hold the value of that property
+//   - create a new property in the result object using that variable and assign it a value of the property
 // - return a result

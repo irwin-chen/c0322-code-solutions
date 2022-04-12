@@ -1,19 +1,17 @@
 /* exported defaults */
 
 function defaults(target, source) {
-  var targetArray = Object.keys(target);
-  var sourceArray = Object.keys(source);
-
-  if (targetArray.length === 0) {
+  if (Object.keys(target).length === 0) {
     Object.assign(target, source);
-  }
-  for (var sourceIndex = 0; sourceIndex < sourceArray.length; sourceIndex++) {
-    var counter = 0;
-    for (var targetIndex = 0; targetIndex < targetArray.length; targetIndex++) {
-      if (targetArray[targetIndex] !== (sourceArray[sourceIndex])) {
-        counter++;
-        if (counter === targetArray.length) {
-          target[sourceArray[sourceIndex]] = Object.values(source)[sourceIndex];
+  } else {
+    for (var sourceProperty in source) {
+      var counter = 0;
+      for (var targetProperty in target) {
+        if (targetProperty !== sourceProperty) {
+          counter++;
+          if (counter === Object.keys(target).length) {
+            target[sourceProperty] = source[sourceProperty];
+          }
         }
       }
     }
