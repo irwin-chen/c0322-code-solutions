@@ -71,7 +71,7 @@ function winner() {
   if (lastIndex !== index) {
     console.log('There\'s a tie');
   } else {
-    console.log('the winner is ' + players[index].name + ' with ' + max + ' points!');
+    console.log('The winner is ' + players[index].name + ' with ' + max + ' points!');
   }
 }
 
