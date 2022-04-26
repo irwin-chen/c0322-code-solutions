@@ -70,13 +70,23 @@ function winner() {
   var lastIndex = points.lastIndexOf(max);
   if (lastIndex !== index) {
     console.log('There\'s a tie');
+    points = [];
+    for (var i = 0; i < players.length; i++) {
+      if (players[i].hand !== 0) {
+        players[i].hand = [];
+      }
+    }
+    play();
   } else {
     console.log('The winner is ' + players[index].name + ' with ' + max + ' points!');
   }
 }
 
 function play() {
-  createDeck();
+  if (deck.length < 8) {
+    deck = [];
+    createDeck();
+  }
   deal();
   checkValues();
   winner();
