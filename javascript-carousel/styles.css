@@ -1,0 +1,25 @@
+/* type selector */
+
+img {
+  width: 100%;
+}
+
+/* class selector */
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh;
+}
+
+.margin-between {
+  margin: 0 5px;
+}
+
+.image-wrapper {
+  width: 70%;
+}
+
+.margin-top {
+  margin: 20px;
+}

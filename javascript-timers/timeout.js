@@ -1,3 +1,4 @@
+
 var $hello = document.querySelector('h1');
 
 function message() {
