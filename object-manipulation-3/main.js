@@ -1,28 +1,11 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 
-var deck = [];
+var $button = document.querySelector('button');
+var deck = null;
 var rank = ['ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'jack', 'queen', 'king'];
 var suit = ['clubs', 'diamonds', 'hearts', 'spades'];
-var points = [];
-
-var players = [
-  {
-    name: 'Jimmy',
-    hand: []
-  },
-  {
-    name: 'Jamie',
-    hand: []
-  },
-  {
-    name: 'Jango',
-    hand: []
-  },
-  {
-    name: 'Jorothy',
-    hand: []
-  }
-];
+var points = null;
+var players = null;
 
 function Card(rank, suit) {
   this.rank = rank;
@@ -59,6 +42,7 @@ function checkValues() {
       } else {
         sum += holder;
       }
+
     }
     points.push(sum);
   }
@@ -66,24 +50,35 @@ function checkValues() {
 
 function winner() {
   var max = _.max(points);
-  var index = points.indexOf(max);
-  var lastIndex = points.lastIndexOf(max);
-  if (lastIndex !== index) {
-    console.log('There\'s a tie');
+  var holder = [];
+  for (var i = 0; i < points.length; i++) {
+    if (points[i] === max) {
+      holder.push(players.slice(i, i + 1));
+    }
+  }
+  players = holder.flat();
+  if (players.length > 1) {
+    var tie = '';
+    for (i = 0; i < players.length; i++) {
+      tie += players[i].name + ' ';
+    }
+    tie = tie.trim();
+    console.log('There\'s a tie between ' + tie.replaceAll(' ', ', ') + ' with ' + max + ' points!');
     points = [];
-    for (var i = 0; i < players.length; i++) {
+
+    for (i = 0; i < players.length; i++) {
       if (players[i].hand !== 0) {
         players[i].hand = [];
       }
     }
     play();
   } else {
-    console.log('The winner is ' + players[index].name + ' with ' + max + ' points!');
+    console.log('The winner is ' + players[0].name + ' with ' + max + ' points!');
   }
 }
 
 function play() {
-  if (deck.length < 8) {
+  if (deck.length < players.length * 2) {
     deck = [];
     createDeck();
   }
@@ -92,4 +87,28 @@ function play() {
   winner();
 }
 
-play();
+$button.addEventListener('click', newGame);
+
+function newGame() {
+  players = [
+    {
+      name: 'Jimmy',
+      hand: []
+    },
+    {
+      name: 'Jamie',
+      hand: []
+    },
+    {
+      name: 'Jango',
+      hand: []
+    },
+    {
+      name: 'Jorothy',
+      hand: []
+    }
+  ];
+  deck = [];
+  points = [];
+  play();
+}
