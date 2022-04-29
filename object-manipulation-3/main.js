@@ -64,6 +64,7 @@ function winner() {
     }
     tie = tie.trim();
     console.log('There\'s a tie between ' + tie.replaceAll(' ', ', ') + ' with ' + max + ' points!');
+    console.log('points');
     points = [];
 
     for (i = 0; i < players.length; i++) {
