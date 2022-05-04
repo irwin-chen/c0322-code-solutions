@@ -1,0 +1,500 @@
+  126  git switch array-manipulation-3
+  127  git status
+  128  git add array-manipulation-3
+  129  git status
+  130  git status
+  131  git add array-manipulation-3
+  132  git status
+  133  git commit -m"Completed array-manipulation-3 exercise."
+  134  git add array-manipulation-3
+  135  git commit -m"Completed array-manipulation-3 exercise."
+  136  git push origin array-manipulation-3
+  137  git status
+  138  git switch main
+  139  git branch object-manipulation-3
+  140  git status
+  141  git branch --list
+  142  git switch object-manipulation-3
+  143  git status
+  144  git status
+  145  git status
+  146  git add object-manipulation03
+  147  git add object-manipulation-3
+  148  git commit -m"in prog"
+  149  git commit -m"in prog" --no-verify
+  150  git push origin object-manipulation-3
+  151  git status
+  152  git add javascript-tiemrs
+  153  git add javascript-timers
+  154  git commit -m"Completed javascript-timers exercise."
+  155  git push origin javascript-timers
+  156  git status
+  157  git restore javascript-timers
+  158  git status
+  159  git switch main
+  160  git status
+  161  git switch object-manipulation-3
+  162  git branch--list
+  163  git branch --list
+  164  git switch main
+  165  git branch javascript-timers
+  166  git branch --list
+  167  git switch javascript-timers
+  168  git add javascript-timers
+  169  git commit -m"completed javascript-timers exercise."
+  170  git push origin javascript-timers
+  171  git switch main
+  172  git status
+  173  git switch object-manipulation-3
+  174  git status
+  175  git status
+  176  git add object-manipulation-3/main.js
+  177  git commit -m"created deck, stuck on implementing shuffle"
+  178  git commit -m
+  179  git commit -m
+  180  git commit -m"finished deck creation, no shuffle yet" --no-verify
+  181  git push origin object-manipulation-3
+  182  git status
+  183  git switch main
+  184  git status
+  185  git branch javascript-carousel
+  186  git status
+  187  git switch javascript-carousel
+  188  git status
+  189  git status
+  190  git add javascript-carousel
+  191  git commit -m"Completed javascript-carousel exercise."
+  192  git push origin javascript-carousel
+  193  git status
+  194  git switch objects-manipulation-3
+  195  git status
+  196  git switch object-manipulation-3
+  197  git status
+  198  git status
+  199  git add object-manipulation-3
+  200  git status
+  201  git status
+  202  git commit -m"Completed object-manipulation-3 exercise."
+  203  git push origin object-manipulation-3
+  204  git switch main
+  205  git status
+  206  git add object-manipulation-3/main.js
+  207  git status
+  208  git commit -m"?"
+  209  git push origin object-manipulation-3
+  210  git status
+  211  git switch main
+  212  http
+  213  html
+  214  html
+  215  http
+  216  http
+  217  http http://example.com
+  218  http --verbose http://example.com
+  219  http http://www.example.com
+  220  http -verbose http://www.example.com
+  221  http --verbose http://www.example.com
+  222  git status
+  223  git branch http-messages
+  224  git branch --list
+  225  git switch http-messages
+  226  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  227  git status
+  228  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  229  http --body GET https://example.com > http-messages/index.html
+  230  git status
+  231  git add http-messages
+  232  git commit -m"Completed http-messages exercise."
+  233  git push origin git-messages
+  234  git push origin http-messages
+  235  git status
+  236  http git status
+  237  git status
+  238  git switch main
+  239  git branch javascript-ajax
+  240  git status
+  241  git switch javascript-ajax
+  242  git status
+  243  git status
+  244  git add javascript-ajax
+  245  git commit -m"Completed javascript-ajax exercise."
+  246  git push origin javascript-ajax
+  247  git status
+  248  git switch main
+  249  http
+  250  git pull origin
+  251  git pull origin
+  252  http GET https://pokeapi.co/api/v2/pokemon/1
+  253  http GET https://pokeapi.co/api/v2/pokemon/5
+  254  http GET GET https://api.spoonacular.com/recipes/complexSearch
+  255  git status
+  256  http GET https://api.spoonacular.com/recipes/complexSearch
+  257  http GET https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2
+  258  http GET https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2/information?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true.
+  259  http GET https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2/information?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  260  q
+  261  http GET https://api.spoonacular.com/recipes/716429/information?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  262  http get https://api.spoonacular.com/recipes/716429/information?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true?apiKey=a264ae5f3cq
+  263  q
+  264  clear
+  265  http GET GET https://api.spoonacular.com/recipes/complexSearch
+  266  clear
+  267  http GET https://api.spoonacular.com/recipes/complexSearch?includeIngredients=tomato,egg?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true.
+  268  clear
+  269  http GET https://api.spoonacular.com/recipes/complexSearch?includeIngredients=tomato,cheese?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  270  q
+  271  http GET https://api.spoonacular.com/recipes/complexSearch?includeIngredients=tomato?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  272  a
+  273  http GET https://api.spoonacular.com/recipes/complexSearch?includeIngredients=tomato&apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  274  a
+  275  http GET https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2
+  276  http GET https://api.spoonacular.com
+  277  http get https:// api.spoonacular.com/recipes/complexSearch?query=pasta
+  278  http GET https://api.spoonacular.com/recipes/complexSearch?query=pasta
+  279  http GET https://api.spoonacular.com/recipes/complexSearch?query=pasta?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  280  http GET https://api.spoonacular.com/recipes/complexSearch?query=pasta?apiKey=a264ae5f3ca9445d94 
+  281  http GET https://api.spoonacular.com/recipes/complexSearch
+  282  a
+  283  clear
+  284  http GET https://api.spoonacular.com/recipes/complexSearch?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  285  http GET https://api.spoonacular.com/recipes/complexSearch?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true q=="pasta"
+  286  http GET https://api.spoonacular.com/recipes/complexSearch?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true q=="rice"
+  287  a
+  288  clear
+  289  http GET https://api.spoonacular.com/recipes/complexSearch?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true q=="rice"
+  290  rice
+  291  git status
+  292  http https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  293  http https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2?apiKey=a264ae5f3ca9445d94cfeb08761ae88b&includeNutrition=true
+  294  http https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2 apiKey=a264ae5f3ca9445d94cfeb08761ae88b includeNutrition=true
+  295  clear
+  296  http GET https://api.spoonacular.com/recipes/findByIngredients apiKey=a264ae5f3ca9445d94cfeb08761ae88b 
+  297  http
+  298  http GET https://tastedive.com/api/similar?q=red+hot+chili+peppers%2C+pulp+fiction
+  299  http GET https://tastedive.com/api/similar?q=red+hot+chili+peppers
+  300  git status
+  301  http
+  302  http GET https://api.spoonacular.com/recipes/findByIngredients ingredients:chicken apiKey:a264ae5f3ca9445d94cfeb08761ae88b
+  303  http GET https://tastedive.com/api/similar q==Coldplay
+  304  HTTP GET https://api.spoonacular.com/recipes/complexSearch
+  305  http GET https://api.spoonacular.com/recipes/complexSearch includeIngredients==chicken apiKey==a264ae5f3ca9445d94cfeb08761ae88b
+  306  http GET https://api.spoonacular.com/recipes/complexSearch includeIngredients==pasta,chicken apiKey==a264ae5f3ca9445d94cfeb08761ae88
+  307  http GET https://api.spoonacular.com/recipes/complexSearch q==1096088 apiKey==a264ae5f3ca9445d94cfeb08761ae88b
+  308  http GET https://api.spoonacular.com/recipes/715415/information apiKey==a264ae5f3ca9445d94cfeb08761ae88b
+  309  http GET https://api.spoonacular.com/recipes/complexSearch includeIngredients==chicken apiKey==a264ae5f3ca9445d94cfeb08761ae88b
+  310  git status
+  311  http GET https://api.jikan.moe/v4/anime q==naruto
+  312  http GET https://tradestie.com/api/v1/apps/reddit date==2022-04-03
+  313  http GET https://passwordinator.herokuapp.com num==true
+  314  http GET https://passwordinator.herokuapp.com num==true char==true caps==true
+  315  clear
+  316  http GET https://api.jikan.moe/v4/anime q==jujutsu
+  317  clear
+  318  git statu
+  319  git status
+  320  http GET https://tastedive.com/api/similar q==lady+gaga
+  321  http GET https://tastedive.com/api/similar q==redhotchilipeppers
+  322  http GET https://tastedive.com/api/similar q==bon%2jovi
+  323  http GET https://tastedive.com/api/similar q=="bon jovi"
+  324  http GET 
+  325  Evil Insult Generator
+  326  Insults ¶
+  327  GENERATE INSULT  ¶
+  328  Generate InsultGET/generate_insult.php
+  329  This is endpoint serves to generate insults from the API.
+  330  The following parameters are optional
+  331  lang - The language of the insult you want. Defaults to English if not provided
+  332  type - The response type. It supports text, XML and JSON. Defaults to plain text if not provided.
+  333  Example URI
+  334  https://evilinsult.com/generate_insult.php
+  335  http https://evilinsult.com/generate_insult.php type==json
+  336  http https://evilinsult.com/generate_insult.php type==json
+  337  http https://evilinsult.com/generate_insult.php type==json
+  338  http https://evilinsult.com/generate_insult.php type==json
+  339  git status
+  340  http
+  341  http GET GET https://api.spoonacular.com/recipes/{id}/information
+  342  http GET GET https://api.spoonacular.com/recipes/complexSearch apiKey==a264ae5f3ca9445d94cfeb08761ae88b includeIngredients==chicken,pasta instructionsRequired==true
+  343  http GET https://api.spoonacular.com/recipes/complexSearch apiKey==a264ae5f3ca9445d94cfeb08761ae88b includeIngredients==chicken,pasta instructionsRequired==tr
+  344  http GET https://api.spoonactular.com/recipes/637923/information apiKey==a264ae5f3ca9445d94cfeb08761ae88b includeNutrition==true
+  345  http GET https://api.spoonacular.com/recipes/637923/information apiKey==a264ae5f3ca9445d94cfeb08761ae88b includeNutrition==true
+  346  http GET https://api.spoonacular.com/recipes/637923/information apiKey==a264ae5f3ca9445d94cfeb08761ae88b includeNutrition==false
+  347  http GET GET https://api.spoonacular.com/recipes/complexSearch apiKey==a264ae5f3ca9445d94cfeb08761ae88b includeIngredients==fish,rice
+  348  http GET https://api.spoonacular.com/recipes/complexSearch apiKey==a264ae5f3ca9445d94cfeb08761ae88b includeIngredients==fish,rice
+  349  git status
+  350  git switch object-manipulation-3
+  351  git status
+  352  git status
+  353  git add object-manipulation-3/main.js
+  354  add js
+  355  git add object-manipulation-3/main.js
+  356  git status
+  357  git status
+  358  git status
+  359  git status
+  360  git commit -m"added tiebreaker and deck shuffler; will now reshuffle all cards when less than 8 cards are in the deck, and will keep playing until a winner has been found"
+  361  git push origin object-manipulation-3
+  362  git status
+  363  git switch main
+  364  git switch javascript-timers
+  365  git switch object-manipulation-3
+  366  git restore javascript-timers
+  367  git status
+  368  git switch main
+  369  git pull origin
+  370  git switch object-manipulation-3
+  371  git status
+  372  git status
+  373  git branch --list
+  374  git switch javascript-timers
+  375  git switch object-manipulation-3
+  376  git status
+  377  git status
+  378  git switch main
+  379  git status
+  380  git restore object-manipulation-3
+  381  git status
+  382  git switch object-manipulation-3
+  383  git switch object-manipulation-3
+  384  git switch object-manipulation-3
+  385  git status
+  386  git add object-manipulation-3
+  387  git status
+  388  git commit -m"added tiebreaker to only include winners of tie, added custom message for ties, added button to create games"
+  389  git push origin object-manipulation-3
+  390  git status
+  391  git pull
+  392  git pull origin
+  393  git push origin object-manipulation-3
+  394  git switch main
+  395  git pull origin
+  396  git switch object-manipulation-3
+  397  git push origin object-manipulation-3
+  398  git pull origin
+  399  git switch object-manipulation-3
+  400  git push origin object-manipulation-3
+  401  git pull origin
+  402  git pull origin
+  403  git pull origin
+  404  git switch main
+  405  git pull origin
+  406  git switch object-manipulation-3
+  407  git push origin
+  408  git push origin object-manipulation-3
+  409  git status
+  410  git pull origin object-manipulation-3
+  411  git pull -f origin object-manipulation-3
+  412  git push -f origin object-manipulation-3
+  413  git status
+  414  git status
+  415  git add object-manipulation-3
+  416  git commit -m"most up to date copy"
+  417  git status
+  418  git add object-manipulation-3/main.js
+  419  git commit-m"most up to date version"
+  420  git commit -m"most up to date vesrion"
+  421  git push origin object-manipulation-3
+  422  git status
+  423  git add js
+  424  git add object-manipulation-3
+  425  git status
+  426  git status
+  427  git add object-manipulation-3
+  428  git status
+  429  git commit -m"cleared any extra console.logs"
+  430  git push origin object-manipulation-3
+  431  git siwtch main
+  432  git switch main
+  433  git status
+  434  git branch es6-const-let
+  435  git status
+  436  git switch es6-const-let
+  437  git status
+  438  git status
+  439  git add es6-const-let/
+  440  git commit -m
+  441  git commit -m"Completed es6-const-let exercise."
+  442  git status
+  443  git push origin es6-const-let
+  444  git status
+  445  git switch main
+  446  git status
+  447  git branch es6-template-literals
+  448  git status
+  449  git branch --list
+  450  git switch es6-template-literals
+  451  git status
+  452  git status
+  453  git add es6-template-literals
+  454  git status
+  455  git commit -m"Completed es6-template-literals exercise."
+  456  git push origin es6-template-literals
+  457  git status
+  458  git status
+  459  git switch main
+  460  git branch es6-destructuring
+  461  git status
+  462  git switch es6-destructuring
+  463  git status
+  464  git status
+  465  git add es6-destructuring
+  466  git commit -m
+  467  git commit -m"Completed es6-destructuring exercise."
+  468  git status
+  469  git push origin es6-destructuring
+  470  git status
+  471  git status
+  472  git status
+  473  git switch main
+  474  git status
+  475  git branch es6-arrow-functions
+  476  git branch --list
+  477  git switch es6-arrow-functions
+  478  git status
+  479  git status
+  480  git add es6-arrow-functions
+  481  git status
+  482  git commit -m
+  483  giti commit -m"Completed es6-arrow-functions exercise."
+  484  git commit -m"Completed es6-arrow-functions exercise."
+  485  git status
+  486  git push origin es6-arrow-functions
+  487  git status
+  488  git switch main
+  489  git status
+  490  git pull origin
+  491  git status
+  492  status
+  493  git status
+  494  git branch command-line-basics
+  495  git status
+  496  git switch command-line-basics
+  497  git status
+  498  cd command-line-basics
+  499  cd command-line-basics
+  500  cd command-line-basics
+  501  git status
+  502  cd command-line-basics
+  503  git cd command-line-basics
+  504  cd command-line-basics
+  505  cd command-line-basics
+  506  git switch
+  507  git switch main
+  508  cd command-line-basics
+  509  git switch command-line-basics
+  510  cd command-line-basics
+  511  man man
+  512  man cat
+  513  man cat 
+  514  man cat option
+  515  man cat file
+  516  man cat laziness.txt
+  517  cat laziness.txt
+  518  cat laziness.txt, impatience.txt, hubris.txt
+  519  man cat
+  520  cat laziness.txt
+  521  cat impatience.txt
+  522  cat hubris.txt
+  523  man cat
+  524  cat laziness.txt impatience.txt hubris.txt
+  525  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  526  cat three-virtues.txt
+  527  man ls
+  528  ls lfz-staff
+  529  man ls
+  530  man -a lfz-staff
+  531  ls -a lfz-staff
+  532  ls -f lfz-staff
+  533  ls -F lfz-staff
+  534  ls -aF lfz-staff
+  535  ls command-line-basics
+  536  ls -aF command-line-basics
+  537  ls lfz-staff 
+  538  ls -aF lfz-staff
+  539  man ls
+  540  ls -aF lfz-staff > lfz-staff/contents.txt
+  541  cat contents.txt
+  542  cat contents.txt
+  543  cat ././contents.txt
+  544  cat three-virtues.txt
+  545  cat ..contents.txt
+  546  cat /command-line-basics/lfz-staff/contents.txt
+  547  cat command-line-basics/lfz-staff/contents.txt
+  548  cat ././contents.txt
+  549  cat lfz-staff/contents.txt
+  550  cd man pwd
+  551  man pwd
+  552  pwd
+  553  pwd > i-was-here.txt
+  554  cat i-was-here.txt
+  555  man echo
+  556  echo 'Hello, World!'
+  557  echo 'Hello, World!' > hello.txt
+  558  ls 
+  559  ls -aF
+  560  cat hello.txt
+  561  man touch
+  562  touch > tag-youre-it
+  563  git status
+  564  touch > tag-youre-it.txt
+  565  man touch
+  566  touch tag-youre-it.txt
+  567  touch snoot/boop.txt
+  568  ls snoot
+  569  ls -aF snoot
+  570  man mkdir
+  571  man mkdir
+  572  man mkdir
+  573  mkdir parent
+  574  mkdir -p parent/child
+  575  mkdir -p parent/child/grandchild
+  576  touch parent child grandchild
+  577  ls -a parent
+  578  man touch
+  579  man touch parent/child/grandchild
+  580  touch parent/child/grandchild
+  581  ls -a parent/child/grandchild
+  582  touch grandchild
+  583  touch parent/child/grandchild .gitkeep
+  584  touch .gitkeep
+  585  ls -a
+  586  ls -a parent/child/grandchild
+  587  ls -a grandchild
+  588  ls -a praent/child
+  589  ls -a parent/child
+  590  ls -a parent/child/grandchild
+  591  ls -a parent
+  592  touch parent
+  593  ls -a parent
+  594  ls -aF parent
+  595  ls -aF parent/child/grandchild
+  596  ls -aF parent/child
+  597  ls -aF parent
+  598  touch parent parent.txt
+  599  touch parent/ parent.txt
+  600  man touch
+  601  touch parent/child/grandchild
+  602  ls -a parent/child/grandchild
+  603  touch parent/child/grandchild .gitkeep
+  604  ls -a parent/child/grandchild
+  605  touch parent/child/grandchild.gitkeep
+  606  touch parent/child/grandchild/.gitkeep
+  607  ls -a parent/child/grandchild
+  608  man mv
+  609  mv pokiemans pokemon
+  610  ls
+  611  man rm
+  612  rm lol.txt
+  613  ls
+  614  rm -r kill-me/
+  615  ls
+  616  cp
+  617  man cp
+  618  cp and-then.txt no-and-then.txt
+  619  ls
+  620  man cat
+  621  cat and-then.txt no-and-then.txt
+  622  man history
+  623  history
+  624  git status
+  625  history > command-history.txt
