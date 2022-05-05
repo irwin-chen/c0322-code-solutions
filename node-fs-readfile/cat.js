@@ -1,14 +1,25 @@
 const fs = require('fs');
 const [, , ...rest] = process.argv;
 
-console.log(rest);
+let counter = 0;
+const arr = [];
 
-const counter = 0;
-for (let i = 0; i < rest.length; i++) {
-  fs.readFile(rest[i], 'utf8', (err, data) => {
+function recursion() {
+  fs.readFile(rest[counter], 'utf8', (err, data) => {
     if (err) {
       throw err;
     }
-    console.log(counter, data);
+    arr.push(data);
+    counter++;
+
+    if (counter < rest.length) {
+      recursion();
+    } else if (counter === rest.length) {
+      for (let i = 0; i < rest.length; i++) {
+        console.log(arr[i]);
+      }
+    }
   });
 }
+
+recursion();
