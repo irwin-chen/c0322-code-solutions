@@ -26,8 +26,10 @@ app.get('/api/notes/:id', (req, res) => {
 app.use(express.json());
 
 app.post('/api/notes', (req, res) => {
-  if (req.body === {}) {
+  if (!req.body.content) {
     res.status(400).send({ error: 'content is a required field' });
+  } else if (req.body.content) {
+    res.send(data);
   }
 });
 
