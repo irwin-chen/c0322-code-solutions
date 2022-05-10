@@ -1,5 +1,6 @@
 const data = require('./data.json');
 const express = require('express');
+const fs = require('fs');
 
 const app = express();
 
@@ -26,15 +27,20 @@ app.get('/api/notes/:id', (req, res) => {
 app.use(express.json());
 
 app.post('/api/notes', (req, res) => {
-
   const newEntry = req.body;
-  if (!newEntry) {
+  if (!newEntry.content) {
     res.status(400).send({ error: 'content is a required field' });
-  } else if (newEntry) {
+  } else {
     newEntry.id = data.nextId;
     data.notes[data.nextId] = newEntry;
     data.nextId++;
     res.status(201).json(newEntry);
+    const updatedData = JSON.stringify(data, null, 2);
+    fs.writeFile('./data.json', updatedData, 'utf8', err => {
+      if (err) {
+        throw err;
+      }
+    });
   }
 });
 
