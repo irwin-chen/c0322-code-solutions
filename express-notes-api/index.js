@@ -34,11 +34,13 @@ app.post('/api/notes', (req, res) => {
     newEntry.id = data.nextId;
     data.notes[data.nextId] = newEntry;
     data.nextId++;
-    res.status(201).json(newEntry);
     const updatedData = JSON.stringify(data, null, 2);
     fs.writeFile('./data.json', updatedData, 'utf8', err => {
       if (err) {
-        throw err;
+        console.error({ error: 'An unexpected error occurred.' });
+        res.send(500);
+      } else {
+        res.status(201).json(newEntry);
       }
     });
   }
