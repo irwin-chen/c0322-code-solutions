@@ -6,6 +6,6 @@ obj.then(win => {
   console.log(win);
 });
 
-obj.catch(function (error) {
-  console.error(error.message);
+obj.catch(error => {
+  console.log(error.message);
 });
