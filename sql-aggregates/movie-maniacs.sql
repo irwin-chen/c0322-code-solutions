@@ -1,5 +1,5 @@
 select "c"."firstName",
-       "c"."lastName"
+       "c"."lastName",
        sum("p"."amount") as "totalPayments"
   from "customers" as "c"
   join "payments" as "p" using ("customerId")
