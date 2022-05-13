@@ -65,8 +65,16 @@ app.post('/api/grades', (req, res) => {
     });
 });
 
-app.put('api/grades/:id', (req, res) => {
-
+app.put('/api/grades/:id', (req, res) => {
+  const gradeId = req.body.id;
+  const [,, x, y, z] = req.body;
+  const sql = `
+  update "grades"
+     set "name" = $1
+         "course" = $2
+         "score" = $3
+   where "
+  `;
 });
 
 app.listen(3000, () => {
