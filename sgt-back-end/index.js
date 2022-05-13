@@ -112,6 +112,38 @@ app.put('/api/grades/:id', (req, res) => {
     });
 });
 
+app.delete('/api/grades/:id', (req, res) => {
+  const id = Number(req.params.id);
+  if (!id) {
+    res.status(400).json({
+      error: 'invalid gradeId, please enter an integer greater than 0'
+    });
+  }
+  const params = [id];
+  const sql = `
+    delete from "grades"
+     where "gradeId" = $1
+     returning *
+  `;
+  db.query(sql, params)
+    .then(result => {
+      const queryResult = result.rows[0];
+      if (!queryResult) {
+        res.status(404).json({
+          error: `No entry with 'gradeId' ${id} found`
+        });
+      } else {
+        res.status(204).json(result.rows[0]);
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).json({
+        error: 'an unexpected event has occurred'
+      });
+    });
+});
+
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Port 3000 connected');
