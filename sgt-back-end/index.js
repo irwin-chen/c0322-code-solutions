@@ -85,11 +85,10 @@ app.put('/api/grades/:id', (req, res) => {
     });
     return;
   }
-
   const sql = `
   update "grades"
-     set "name" = $1
-         "course" = $2
+     set "name" = $1,
+         "course" = $2,
          "score" = $3
    where "gradeId" = $4
    returning *
@@ -99,7 +98,7 @@ app.put('/api/grades/:id', (req, res) => {
       const queryResult = result.rows[0];
       if (!queryResult) {
         res.status(404).json({
-          error: `No entry with "gradeId" ${gradeId}`
+          error: `No entry with 'gradeId' ${gradeId}`
         });
       } else {
         res.status(200).json(result.rows[0]);
