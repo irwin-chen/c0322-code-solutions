@@ -1,23 +1,23 @@
 import React from 'react';
 
-let count = 0;
-
 export default class HotButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clickCount: count
+      clickCount: 0
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
+    let count = this.state.clickCount;
     count++;
     this.setState({ clickCount: count });
   }
 
   render() {
     let color;
+    const count = this.state.clickCount;
     if (count < 3) {
       color = 'purple';
     } else if (count < 6) {
