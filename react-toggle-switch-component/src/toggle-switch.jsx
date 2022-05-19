@@ -14,9 +14,19 @@ export default class ToggleSwitch extends React.Component {
   }
 
   render() {
-
+    let toggle;
+    if (this.state.toggleOn) {
+      toggle = 'on';
+    } else {
+      toggle = 'off';
+    }
     return (
-      <div className='container'></div>
+      <div className='flex'>
+        <div onClick = {this.handleClick} className={`container-${toggle}`}>
+          <div className={`button-${toggle}`}></div>
+        </div>
+        <span className='text'>{toggle}</span>
+      </div>
     );
 
   }
