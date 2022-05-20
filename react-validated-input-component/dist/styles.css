@@ -1,0 +1,19 @@
+.container {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.invalid-text {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.icon {
+  margin-left: 0.5rem;
+}
