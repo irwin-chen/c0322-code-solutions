@@ -30,11 +30,22 @@ export default class Accordion extends React.Component {
 
   clickDrawer(event) {
     const entryId = event.target.getAttribute('dataentryid');
-    // if (event.target.getAttribute)
-    this.setState({
-      active: !this.state.active,
-      entry: entryId
-    });
+    if (entryId !== this.state.entry) {
+      this.setState({
+        active: true,
+        entry: entryId
+      });
+    } else if (entryId === this.state.entry && this.state.active === false) {
+      this.setState({
+        active: true,
+        entry: entryId
+      });
+    } else {
+      this.setState({
+        active: false,
+        entry: entryId
+      });
+    }
   }
 
   render() {
@@ -49,7 +60,7 @@ export default class Accordion extends React.Component {
               {entry.description}
             </div>
           </div>
-        )
+        );
       } else {
         return (
           <div className="tab" key={entry.id} dataentryid={entry.id} onClick={this.clickDrawer}>
@@ -58,13 +69,13 @@ export default class Accordion extends React.Component {
               {entry.description}
             </div>
           </div>
-        )
+        );
       }
-      return (
-        <div className="container">
-          {entries}
-        </div>
-      )
-    }
+    });
+    return (
+      <div className="container">
+        {entries}
+      </div>
+    );
   }
-};
+}
