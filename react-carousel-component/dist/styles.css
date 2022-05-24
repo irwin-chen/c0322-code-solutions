@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bullet-container {
+  display: flex;
+}
+
+.image {
+  object-fit: cover;
+  height: 500px;
+  width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+/** fa-solid vs fa-regular **/
