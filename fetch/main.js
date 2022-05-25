@@ -1,7 +1,4 @@
-const arr = [];
-fetch('https:://jsonplaceholder.tpicode.com/users')
+
+fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
-  .then(data => {
-    arr.push(data);
-  });
-console.log(arr);
+  .then(data => console.log(data));
