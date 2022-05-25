@@ -41,7 +41,7 @@ export default class Carousel extends React.Component {
 
   bulletClick(event) {
     this.clicked();
-    const selectedImage = this.state.image;
+    const selectedImage = Number(event.target.getAttribute('id'));
     this.setState({
       image: selectedImage
     });
@@ -88,7 +88,7 @@ export default class Carousel extends React.Component {
     const bulletList = list.map(entry => {
       if (entry.id === currentImageId) {
         return (
-          <i onClick={this.bulletClick} className="fa-solid fa-circle margin-side" key={entry.id}></i>
+          <i onClick={this.bulletClick} className="fa-solid fa-circle margin-side" key={entry.id} id={entry.id}></i>
         );
       } else {
         return (
