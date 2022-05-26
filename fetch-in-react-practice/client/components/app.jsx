@@ -63,7 +63,7 @@ export default class App extends React.Component {
     this.componentDidMount();
   }
 
-  toggleCompleted(todoId) {
+  toggleCompleted(todoId, event) {
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.
