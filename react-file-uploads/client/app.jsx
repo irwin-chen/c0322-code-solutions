@@ -45,6 +45,25 @@ export default class App extends React.Component {
      * https://reactjs.org/docs/uncontrolled-components.html#the-file-input-tag
      * https://reactjs.org/docs/refs-and-the-dom.html
      */
+    const form = new FormData();
+    form.append('caption', this.state.caption);
+    form.append('image', this.fileInputRef.current.files[0]);
+
+    fetch('/api/uploads', {
+      method: 'POST',
+      body: form
+    })
+      .then(res => res.json())
+      .then(response => {
+        console.log(response);
+        this.setState({
+          caption: ''
+        });
+        this.fileInputRef.current.value = null;
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   render() {
