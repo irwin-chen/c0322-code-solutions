@@ -1,2 +1,124 @@
-User-Can-Sign-Up:
-The user first lands on the home page
+Sign-Up:
+- The user first lands on the home page
+- user clicks on the register button, the hash button changes to the hash for sign up
+    - the event listener catches the hash change and then runs the setState method.
+        - the parseRoute function is then called on the hash property of the location property of the window object, parses the route to remove the ‘#’ in the string
+        - an octothorpe-less string is returned from the function call and assigned to the route property of the state property of the this object.
+        - no token or user has been assigned at this point, isAuthorizing property of the state property of the this object is assigned null, the user property is assigned a value of user (null because no token found in local storage yet)
+        - the render prototype method of the react class component App is then called due to the change in state (from the setState method)
+            - since isAuthorizing property is false, the react elements are returned from the render function
+                - the renderPage method of the this object is called, because the path was sign-up, the auth react element is returned
+    - Every time something is typed into the username or password textboxes, the keystroke event is fired and the handleChange method is called
+        - the method call updates the value of the textbox via the setState method, which in turn rerenders the componenet to reflect the keystroke
+    - When the user hits the submit button, the handleSubmit method is called
+        - first the props checks the action property of the props property of the this object for a sign-up action or sign-in action, the value then assigned back to action property in its own object literal
+        - client then uses the fetch function to send a post request to the server with the entered username and password as the body
+            - when the server gets the post request, it first creates  a request object with a body property, and attacheds the username and password properties to it.
+            - it then checks to see if a username and password have been assigned ( or left blank )
+                - if there is a valid username & password, then the hash method of the argon2 object is called with the password as the argument
+                - the return of the hash method is a promise object, which is then passed to the then method of that return.
+                    - in the then method, a new template literal is assigned to the variable sql, in the format of sql - inserts into the “user” table the column names “username” and “hashedPassword”, assigning them the first and second values of the param list
+                    - a params array is created and assigned the variables username and hashPassword
+                    - depending on the outcome of the database request
+                    - the query method of the db object is called with two arguments, the sql (template literal) and the params list. (insert request from server to database)
+                        - if the database insert request is successful, the database returns a promise object. the first index in the rows prop of the result object is assigned to the user element in an array literal.
+                            - the status method of the response object is called with 1 argument, the 201 (signifies successful request), the json method of that return is then called with the user var as an argument. This returns the column variables specified in the return in the sql template literal.
+        - the server then sends back a response as a promise if successful, the client then parses the response object using the json Method of the response object. the return of the json method returns another promise object
+        - another then method is able to take the return of the previous then method (a promise object) and depending on the action (signup), assigns a value of sign-in to the window.location.hash.
+        - after the handleSubmit method, the render method is called and takes into account the change in the assigned value of the window.location.hash
+            - then updates the page to reflect the sign-in page instead of sign-up
+
+
+Sign-In:
+- User types in their login information
+    - the keystrokes are captured by the onChange prop of the username and password textboxes, which in turn call the handleChange prototype method
+    - the prototype changes the value of the username and password textboxes respectively via the setState method, which in turn causes a render of the react elements.
+        - this change is reflected as separate key inputs appearing in the username and password textboxes for the user
+- When the user hits the submit button, the handleSubmit method is called
+    - the action prop is destructured from this.props and assigned to the action variable
+    - an object literal in fetch format is assigned to the variable req
+    - the fetch function is called with two arguments, the route (sign-in) and the req variable (client side post request)
+    - the post method of the app object (with the path of sign-in) is called
+        - username and password properties are destructured from the body prop of the req object and assigned to their respectively named variables
+        - If a username or password are not provided, a guard statement calls the client-error function with a new operator and two arguments, the number 401 and a string detailing the error, the error is then thrown out of the function
+        - a template literal is assigned to the var sql, where it is selecting “userId” and “hashedPassword” columns from the “users” table, specifying the specific username provided by the user
+        - the username is placed as an element of an array literal and assigned to the params variable
+        - the query method of the db object is then called with two arguments, the var sql and params. This sends a select statement from the server to the database
+            - the database sends a response backin teh form of a promise object, the then method is called on that return
+                - the user prop is destructured from the rows prop of the result object, assigned back to the var prop.
+                - if the username is not found in the database, the first index of result.rows should be undefined
+                    - if not a valid user, ClientError function is then called with the new operator and 2 args, the number 401 and a string
+                - if valid, the userId and hashedPassword properties are destructured from teh user object and assigned to the respective variables
+                - verify method of the argon 2 object called with the hashedPassword and entered password as arguments, returns a promise object with a boolean whether or not the password and hashedPassword match
+                    - if false, throws an error (since the password is wrong)
+                - otherwise (if the password and hashedpassword match) a new obj literal with the property and values of userId and username is assigned to the payload variable.
+                - the sign method of the jwt object is called with payload and the token_secret prop of the env prop of the process object as arguments, the return is assigned to a token variable.
+                - a json method of the response object is called with an object literal as the argument, containing the token prop and value, and the user prop with a value of payload. this is returned from the query method of the db object and from the server back to the client
+        - the return of the fetch function is a promise object, which is then parsed by the json method of the res object. this returns another promise object
+        - the then method of the return promise object is called, the user property and token property of the result object both exist now, which fulfills the condition
+            - the onSignIn method of the props property of the this object is called with one argument, the results variable.
+        - the handleSignIn method is then called
+            - user and token properties of the result object are destructured and reassigned to their respective variables
+            - the setItem method of the localStorage prop of the window obj is then called with two args, a string and token var (stores token into local storage)
+                - the setState method is now called with one argument, an object literal with the property and value of user
+                - the setState method call is followed by a render method call
+                    - the sign in page is still rendered due to the renderPage function
+                - due to the componentDidMount method being at the end of the lifecycle, it is then called after the render method.
+                    - The getItem method of the localStorage property of the window object is called with one argument, a string and the return is assinged to the token.
+                    - because there is a token now available (from signing in), the jwtDecode function is called with an argument of the var token and then assigned to the user variable.
+                    - the setState method of the this object is then called with one argument, an obj literal with two props, the property and value user (now an actual value), and the isAuthorizing prop with a value of false. The setState forces a rerender from the App class component.
+                    - the page is rendered again, and then the renderPage method of this object is called once again.
+                        - the path is still ‘sign-in’, so the auth page is rendered.
+                            - because user is now truthy (not null), the function component redirect gets called with a props of to with a value of ‘’
+                            - a URL function is called with a new operator and an argument of the location property of the window object, it is then assigned to the url variable
+                            - checks the condition if props.to is he to an empty string
+                                - if so, the hash property of the url object is assigned a value of (‘#’)
+                                - the replace method of the location prop of the window obj is then called with one argument, url, and then null is returned from the Redirect function.
+                                    - the hash is changed, so due to the event listener for hashchange, the componentdidMount method is now called.
+                                        - the parseRoute function is then called with the argument of hash property of the location prop of the window object, because the value of the hash property is just a plain ‘#’, an empty string is returned from the parseRoute function. This empty string is then assigned to the route property of the state property of the this object.
+                                        - Everything else should still be the same, the setState method call should induce a render method call, where the renderPage method of this object is eventually called
+                                        - at the renderPage method, the path is equal to an empty string (‘’), so the home react component is called and the home react element is returned
+                                            - the render method of the app class component is called again, this time the home page react element and the rest of the app react elements are loaded in
+
+Stay signed-in
+- when the page is refreshed, the entire app is rendered from the start again
+    - the constructor method is called
+        - creates a new object literal, assigns null to user, true to isAuthorizing, and the return of the parseRoute(window.location.hash) to route, and then assigns the object literal to the state property of the this object
+    - the render method is then called, the isAuthorizing property is true so nothing is returned
+    - Moves onto componentDidMount method( end of lifecycle)
+        - the get item method of the localstorage property of window object is called with the argument of a string, the return is then assigned to the variable token.
+                    - because there is a token now available (from signing in), the jwtDecode function is called with an argument of the var token and then assigned to the user variable.
+                    - the setState method of the this object is then called with one argument, an obj literal with two props, the property and value user (now an actual value), and the isAuthorizing prop with a value of false. The setState forces a rerender from the App class component.
+                    - the page is rendered again, and then the renderPage method of this object is called once again.
+                        - the path is still ‘sign-in’, so the auth page is rendered.
+                            - because user is now truthy (not null), the function component redirect gets called with a props of to with a value of ‘’
+                            - a URL function is called with a new operator and an argument of the location property of the window object, it is then assigned to the url variable
+                            - checks the condition if props.to is he to an empty string
+                                - if so, the hash property of the url object is assigned a value of (‘#’)
+                                - the replace method of the location prop of the window obj is then called with one argument, url, and then null is returned from the Redirect function.
+                                    - the hash is changed, so due to the event listener for hashchange, the componentdidMount method is now called.
+                                        - the parseRoute function is then called with the argument of hash property of the location prop of the window object, because the value of the hash property is just a plain ‘#’, an empty string is returned from the parseRoute function. This empty string is then assigned to the route property of the state property of the this object.
+                                        - Everything else should still be the same, the setState method call should induce a render method call, where the renderPage method of this object is eventually called
+                                        - at the renderPage method, the path is equal to an empty string (‘’), so the home react component is called and the home react element is returned
+                                            - the render method of the app class component is called again, this time the home page react element and the rest of the app react elements are loaded in
+
+
+Sign-out
+- when the signout button is clicked, the handleSignOut method of the this object is called.
+    - the handle signout function calls the removeItem method of the localstorage property of the window object with one argument, the string name (property key for local storage)
+        - then calls the setState method of the this object with argument, an object literal where the null value is assigned to the user property.
+    - the setState invokes a rerender by the render method of the app class component, which then renders the rest of the app react element
+        - the renderPage method of the this object is then called, and because the path is still on ‘’ (hasnt changed since being logged into home page), the renderPage goes to the Home class component.
+        - At the home class component, because user is now null (from the previous setState method in the handleSignOut method, the condition of !this.context.user is now true (this.context.user is falsy beause its null, but the ! makes it true)
+            - the redirect function component is now called with a to property with a value of a string (‘sign-in’)
+                - the props.to fails the conditon of strictly equalling an empty string (‘’), so the url hash is assigned a value of props.to (‘sign-in’)
+                - the replace method of the location prop of the window object is then called with the url as an argument, and then null is returned from the redirect function
+    - because of the path change, the componentDidMount method is called again(due to the event listener).
+        - the setState method of this object is called with one argument, an object literal where the return of the parseRoute function with an argument of the hash property of the location property of the window object is being assigned to the property route. - the value of the return being assigned to route is sign-in
+        - the getItem method of the localstorage property of the window object gets called with one argument, a string, but nothing is found so undefined is assigned to token.
+            - token is now a falsey, so the value of null is assigned to user.
+            - the setState method of the this object is called with one argument, the property and value of user (value of user is null)
+            - the render method is then called, which in return calls the renderPage method
+                - the renderPage method is called, bu tthe path is now strictly equal to sign-in, which then calls the auth class component.
+                    - because suer is null, the the sign in react element is returned from the authpage class component
+                    - this authpage react element is rendered along with the rest of the app react element
