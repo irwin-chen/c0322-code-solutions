@@ -1,0 +1,41 @@
+.container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.carousel-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bullet-container {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.image {
+  object-fit: cover;
+  height: 500px;
+  width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.margin-side {
+  margin: 0 0.5rem;
+}
+
+.fa-angle-left:hover,
+.fa-angle-right:hover,
+.fa-circle:hover {
+  cursor: pointer;
+}
+
+/** fa-solid vs fa-regular **/
+
+/** <i class="fa-solid fa-circle"></i> **/
