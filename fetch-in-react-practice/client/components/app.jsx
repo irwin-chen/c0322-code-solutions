@@ -55,15 +55,14 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(data => {
-        copy.concat(data);
+        const updatedCopy = copy.concat(data);
         this.setState({
-          todos: copy
+          todos: updatedCopy
         });
       });
-    this.componentDidMount();
   }
 
-  toggleCompleted(todoId, event) {
+  toggleCompleted(todoId) {
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.
@@ -85,6 +84,33 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+    const arr = this.state.todos;
+    let toggle;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].todoId === todoId) {
+        toggle = {
+          isCompleted: !arr[i].isCompleted
+        };
+      }
+    }
+    fetch(`api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(toggle)
+    })
+      .then(response => response.json())
+      .then(entry => {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i].todoId === todoId) {
+            arr[i] = entry;
+            this.setState({
+              todo: arr
+            });
+          }
+        }
+      });
   }
 
   render() {
