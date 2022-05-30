@@ -84,7 +84,7 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
-    const arr = this.state.todos;
+    const arr = this.state.todos.slice();
     let toggle;
     for (let i = 0; i < arr.length; i++) {
       if (arr[i].todoId === todoId) {
@@ -106,7 +106,7 @@ export default class App extends React.Component {
           if (arr[i].todoId === todoId) {
             arr[i] = entry;
             this.setState({
-              todo: arr
+              todos: arr
             });
           }
         }
